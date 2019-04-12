@@ -4,7 +4,7 @@
 
 因為翻譯此文件為個人興趣，無法保證何時會翻譯完。 我翻譯的時候照我有興趣的章節優先進行翻譯，因此很有可能這份文件大多數的章節永遠不會被翻譯出來。
 
-本翻譯文件是使用 Markdown 撰寫，使用 [mdBook](https://github.com/rust-lang-nursery/mdBook) 編譯而成，並使用 [Travis CI](https://travis-ci.org/) 自動發佈於本站。
+本翻譯文件是使用 Markdown 撰寫，使用 [mdBook](https://github.com/rust-lang-nursery/mdBook) 編譯而成，並使用 [Travis CI](https://travis-ci.org/) 自動發佈於本站。
 
 - 本書原始碼：[https://github.com/SLMT/fm-3-21-8-zh-tw](https://github.com/SLMT/fm-3-21-8-zh-tw)
 - 本書網址：[http://www.slmt.tw/fm-3-21-8-zh-tw/](http://www.slmt.tw/fm-3-21-8-zh-tw/)
