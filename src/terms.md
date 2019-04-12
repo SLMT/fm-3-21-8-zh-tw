@@ -1,3 +1,5 @@
+# 附錄 - 名詞對照表
+
 下表以英文名詞按照字母順序排序
 
 | 英文 (English) | 繁體中文 (Traditional Chinese) |
