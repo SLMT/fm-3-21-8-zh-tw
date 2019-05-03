@@ -8,7 +8,7 @@
     - [🚧 步兵排與班的作戰基本](work-in-progress.md)
     - [🚧 教條與訓練](work-in-progress.md)
     - [組織](chapter-1/section-3-organization.md)
-    - [🚧 組合](work-in-progress.md)
+    - [聯合](chapter-1/section-4-combinations.md)
     - [🚧 個人領導](work-in-progress.md)
     - [🚧 戰術決策](work-in-progress.md)
     - [🚧 戰鬥力](work-in-progress.md)
