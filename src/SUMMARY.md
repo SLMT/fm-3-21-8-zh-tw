@@ -5,7 +5,7 @@
 --------------------------------------------------
 
 - [戰術的基本](chapter-1/README.md)
-    - [🚧 步兵排與班的作戰基本](work-in-progress.md)
+    - [👷 步兵排與班的作戰基本](chapter-1/section-1-fundamentals.md)
     - [🚧 教條與訓練](work-in-progress.md)
     - [組織](chapter-1/section-3-organization.md)
     - [聯合](chapter-1/section-4-combinations.md)
