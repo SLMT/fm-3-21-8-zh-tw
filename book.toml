@@ -1,5 +1,6 @@
 [book]
 authors = ["SLMT"]
+language = "zh-TW"
 multilingual = false
 src = "src"
 title = "美國陸軍戰場手冊 3-21.8 - 步槍排與班"
