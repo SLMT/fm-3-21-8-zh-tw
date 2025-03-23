@@ -1,24 +1,28 @@
 <!DOCTYPE HTML>
-<html lang="zh-TW" class="sidebar-visible no-js">
+<html lang="zh-TW" class="light sidebar-visible" dir="ltr">
     <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103835191-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-103835191-1');
-        </script>
-        
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>聯合 - 美國陸軍戰場手冊 3-21.8 - 步槍排與班</title>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+
+        <!-- Custom HTML head -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YYCC58ZGW"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+        
+            gtag('config', 'G-1YYCC58ZGW', {
+                'content_group': 'fm-3-21-8-zh-tw'
+            });
+        </script>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
+        <link rel="icon" href="../favicon.svg">
         <link rel="shortcut icon" href="../favicon.png">
         <link rel="stylesheet" href="../css/variables.css">
         <link rel="stylesheet" href="../css/general.css">
@@ -27,8 +31,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../highlight.css">
@@ -36,19 +39,20 @@
         <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        
 
-        
-    </head>
-    <body class="light">
+
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "../";
-            var default_theme = "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -64,72 +68,81 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            document.body.className = theme;
-            document.querySelector('html').className = theme + ' js';
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
         </script>
 
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
+            sidebar_toggle.checked = sidebar === 'visible';
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="expanded affix "><a href="../index.html">簡介</a></li><li class="spacer"></li><li class="expanded "><a href="../chapter-1/index.html"><strong aria-hidden="true">1.</strong> 戰術的基本</a></li><li><ol class="section"><li class="expanded "><a href="../chapter-1/section-1-fundamentals.html"><strong aria-hidden="true">1.1.</strong> 👷 步兵排與班的作戰基本</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">1.2.</strong> 🚧 教條與訓練</a></li><li class="expanded "><a href="../chapter-1/section-3-organization.html"><strong aria-hidden="true">1.3.</strong> 組織</a></li><li class="expanded "><a href="../chapter-1/section-4-combinations.html" class="active"><strong aria-hidden="true">1.4.</strong> 聯合</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">1.5.</strong> 🚧 個人領導</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">1.6.</strong> 🚧 戰術決策</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">1.7.</strong> 🚧 戰鬥力</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">1.8.</strong> 🚧 狀況</a></li></ol></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">2.</strong> 🚧 使用火力</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">3.</strong> 🚧 戰術移動</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">4.</strong> 🚧 保護</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">5.</strong> 🚧 指揮、管制與部隊領導流程</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">6.</strong> 🚧 維持</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">7.</strong> 🚧 進攻行動</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">8.</strong> 🚧 防禦行動</a></li><li class="expanded "><a href="../work-in-progress.html"><strong aria-hidden="true">9.</strong> 🚧 巡邏</a></li><li class="spacer"></li><li class="expanded affix "><a href="../terms.html">附錄 - 名詞對照表</a></li></ol>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                
-                <div id="menu-bar" class="menu-bar">
-                    <div id="menu-bar-sticky-container">
-                        <div class="left-buttons">
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                                <i class="fa fa-paint-brush"></i>
-                            </button>
-                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            </ul>
-                            
-                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            
-                        </div>
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
 
-                        <h1 class="menu-title">美國陸軍戰場手冊 3-21.8 - 步槍排與班</h1> 
+                    <h1 class="menu-title">美國陸軍戰場手冊 3-21.8 - 步槍排與班</h1>
 
-                        <div class="right-buttons">
-                            <a href="../print.html" title="Print this book" aria-label="Print this book">
-                                <i id="print-button" class="fa fa-print"></i>
-                            </a>
-                            
-                        </div>
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
                     </div>
                 </div>
 
-                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -137,10 +150,9 @@
                         </ul>
                     </div>
                 </div>
-                
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -153,20 +165,20 @@
                         <blockquote>
 <p>注意：因為美國陸軍在 2016 年發布全新手冊 ATP 3-21.8，內容差異與本書過大，因此本書停止更新。 新書位置請參考本書簡介的說明。</p>
 </blockquote>
-<h1><a class="header" href="#第四節---聯合" id="第四節---聯合">第四節 - 聯合</a></h1>
+<h1 id="第四節---聯合"><a class="header" href="#第四節---聯合">第四節 - 聯合</a></h1>
 <p>1-101. 陸軍喜好的作戰手段是聯合武裝 (combined arms)。 聯合武裝作戰是基於強項與弱點的概念發展出來的。 所有的武器、分支與戰術都有它的強項與弱點、優勢以及弱勢的地方。 領導們在知道這些的情況下，利用聯合的力量來保護弱點，同時善用強項來為敵人製造困境。 領導在聯合武裝的作戰中有兩項指導原則：互補效應 (complementary effect) 與強化效應 (reinforcing effect)。 這兩項原則是分開且不同的，但是在大多數的情況下很常見。</p>
-<h2><a class="header" href="#互補效應-complementary-effect" id="互補效應-complementary-effect">互補效應 (Complementary Effect)</a></h2>
+<h2 id="互補效應-complementary-effect"><a class="header" href="#互補效應-complementary-effect">互補效應 (Complementary Effect)</a></h2>
 <p>1-102. 領導藉由分配具有不同性質的單位在一起 (圖 1-8) 來創造互補效應。 互補效應讓領導可以保護對己方有利的漏洞或增進對敵人的效果。 例如，領導可以將直接火力與具有迫擊砲或火炮的部隊組合起來，來產生比起分開配置更大的整體效果。 聯合是基於對武器、不同的分支與專長、以及戰術的強項與弱點的了解建立出來的。</p>
 <p><img src="figures/figure-1-8.png" alt="互補效應" />
 圖 1-8. 互補效應</p>
-<h2><a class="header" href="#困境-dilemma" id="困境-dilemma">困境 (Dilemma)</a></h2>
+<h2 id="困境-dilemma"><a class="header" href="#困境-dilemma">困境 (Dilemma)</a></h2>
 <p>1-103. 困境  (dilemma) 是一種敵人只能從兩到三種同樣極差的方案中選擇的情況。 問題 (problem) 是一種敵人只有一種不佳的方案 (譯註：言下之意應該是還有其他方案的意思) 的情況。 有創意的聯合可以讓領導為敵人創造困境。 當敵人遭遇困境時，會有兩種反應。 第一種反應是不知道該做甚麼，因為他們嘗試要從同樣差的選項中選擇。 這種效果我們稱之為「固定」(fixed)。 當敵人被固定時，領導就能獲得行動的自由而受益。 第二種反應是直接從兩個同樣差的選項中選擇一個。 因為友軍的勢力已經在任何敵人的選項上具有優勢，所以領導就能夠利用敵人的決定。</p>
 <p>1-104. 選擇單一道路的話可能會導致糟糕或者失敗的結果。 依賴單一種類的武器、單一種類單位、單一戰術並不會對敵人造成困境。 只要沒有互補效應，敵人就只會遇到問題，並可以從中選出一個較好的解決方案。 就算是給予快速的連續攻擊，敵人也只要馬上撤離即可。 只要沒有第二或第三種施壓者妨礙對方做出良好決定，敵人就可以在作戰中做出反應並留在戰場上。</p>
-<h2><a class="header" href="#強化效應-reinforcing-effect" id="強化效應-reinforcing-effect">強化效應 (Reinforcing Effect)</a></h2>
+<h2 id="強化效應-reinforcing-effect"><a class="header" href="#強化效應-reinforcing-effect">強化效應 (Reinforcing Effect)</a></h2>
 <p>1-105. 領導們在他們將類似的能力聯合起來時就會產生強化效應 (圖 1-9)。 一個例子是隊長利用他的步槍兵火力來強化他的班中的自動武器的效果。 領導們可以藉由同時或者連續使用此種聯合對單一定點形成集中與壓制的效果。 「同時部屬 (simultaneous employment)」強化了兩種元素的效果；「連續部屬 (sequential employment)」則相較於部屬單一元素拉長了效果持續的時間。</p>
 <p><img src="figures/figure-1-9.png" alt="強化效應" />
 圖 1-9. 強化效應</p>
-<h3><a class="header" href="#有效率的領導利用困境來對抗敵人而不是問題" id="有效率的領導利用困境來對抗敵人而不是問題">有效率的領導利用困境來對抗敵人，而不是問題</a></h3>
+<h3 id="有效率的領導利用困境來對抗敵人而不是問題"><a class="header" href="#有效率的領導利用困境來對抗敵人而不是問題">有效率的領導利用困境來對抗敵人，而不是問題</a></h3>
 <p>1-106. 領導總是該想辦法對敵人造成困境 (dliemma)，而不是只有問題 (problem)。 有很多方式可以做到，包括將武器組合起來、不同種類的單位、戰術與地形等等。</p>
 <p>1-107. 在圖 1-10 之中，一個移動中的敵方步兵部隊與靜止的友方部隊接觸。 雙方以直接火力交火。 直接火力造成了問題 (problem)，並且有解決方案。 對直接火力的普遍應對方案就是趴下並以火力回擊。 一旦問題發展下去，直接火力的效果就會逐漸減少，因為敵方會躲進掩體並回擊。</p>
 <p>1-108. 如果友方部隊並不是以直接火力接觸，而是以間接火力接觸的話。 這也只是對敵人造成一種問題，而且同樣有解決方案。 對間接火力的普遍應對方案就是承受火力的一方要離開間接火力的爆炸範圍。 同樣地，一旦問題發展下去，間接火力的效果就會逐漸減少，因為敵方會離開爆炸範圍，並躲進可以遮掩上方的掩體。</p>
@@ -179,17 +191,13 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                        
                             <a rel="prev" href="../chapter-1/section-3-organization.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                        
 
-                        
-                            <a rel="next" href="../work-in-progress.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../work-in-progress.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
-                        
 
                         <div style="clear: both"></div>
                     </nav>
@@ -197,41 +205,36 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
-                    <a href="../chapter-1/section-3-organization.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../chapter-1/section-3-organization.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                
 
-                
-                    <a href="../work-in-progress.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../work-in-progress.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
-                
             </nav>
 
         </div>
 
-        
 
-        
 
-        
 
-        
-        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
-        
+        <script>
+            window.playground_copyable = true;
+        </script>
 
-        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
-        
 
-        
 
+    </div>
     </body>
 </html>
